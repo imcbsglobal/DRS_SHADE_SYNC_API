@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -6,7 +7,12 @@ SECRET_KEY = 'django-insecure-drs-api-change-this-in-production-xyz123'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "drsunited.imcbs.com",
+    "www.drsunited.imcbs.com",
+    "127.0.0.1",
+    "localhost"
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -88,3 +94,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
