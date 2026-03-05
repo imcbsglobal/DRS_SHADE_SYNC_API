@@ -8,6 +8,7 @@ class HospitalInfo(models.Model):
 
     class Meta:
         db_table = "hms_hospital_info"
+        managed   = False
 
     def __str__(self):
         return self.firm_name or "Hospital"
@@ -24,6 +25,7 @@ class Doctor(models.Model):
 
     class Meta:
         db_table = "hms_doctors"
+        managed   = False
 
     def __str__(self):
         return f"{self.code} - {self.name}"
@@ -38,6 +40,7 @@ class DoctorTiming(models.Model):
 
     class Meta:
         db_table = "hms_doctorstiming"
+        managed   = False
 
     def __str__(self):
         return f"Timing {self.slno} - Dr {self.code}"
@@ -50,6 +53,7 @@ class Department(models.Model):
 
     class Meta:
         db_table = "hms_department"
+        managed   = False
 
     def __str__(self):
         return f"{self.code} - {self.name}"
