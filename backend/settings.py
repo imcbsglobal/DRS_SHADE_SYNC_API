@@ -52,9 +52,12 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        # ↓ Point to the SAME db.sqlite3 the sync tool writes to
-        'NAME': r'D:\IMC SYNC _TOOLS\DRS_CLINIC\DRS_SYNCTOOL\db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DRS_UNITED_DB',   # change here
+        'USER': 'postgres',
+        'PASSWORD': 'info@imc',
+        'HOST': '88.222.212.14',
+        'PORT': '5432',
     }
 }
 
