@@ -21,7 +21,7 @@ class DoctorSerializer(serializers.ModelSerializer):
         model  = Doctor
         fields = [
             'code', 'name', 'rate', 'department',
-            'avgcontime', 'qualification', 'synced_at', 'timings'
+            'avgcontime', 'qualification', 'photourl', 'synced_at', 'timings'
         ]
 
     def get_timings(self, obj):
@@ -32,7 +32,7 @@ class DoctorSerializer(serializers.ModelSerializer):
 class DoctorWriteSerializer(serializers.ModelSerializer):
     class Meta:
         model  = Doctor
-        fields = ['code', 'name', 'rate', 'department', 'avgcontime', 'qualification']
+        fields = ['code', 'name', 'rate', 'department', 'avgcontime', 'qualification', 'photourl']
 
 
 class DoctorTimingWriteSerializer(serializers.ModelSerializer):
