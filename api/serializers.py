@@ -11,7 +11,7 @@ class HospitalInfoSerializer(serializers.ModelSerializer):
 class DoctorTimingSerializer(serializers.ModelSerializer):
     class Meta:
         model  = DoctorTiming
-        fields = ['slno', 'code', 't1', 't2', 'synced_at']
+        fields = ['slno', 'code', 't1', 't2', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'time1', 'time2', 'synced_at']
 
 
 class DoctorSerializer(serializers.ModelSerializer):
@@ -38,7 +38,7 @@ class DoctorWriteSerializer(serializers.ModelSerializer):
 class DoctorTimingWriteSerializer(serializers.ModelSerializer):
     class Meta:
         model  = DoctorTiming
-        fields = ['slno', 'code', 't1', 't2']
+        fields = ['slno', 'code', 't1', 't2', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'time1', 'time2']
 
 
 class SyncPayloadSerializer(serializers.Serializer):
@@ -52,4 +52,4 @@ class SyncPayloadSerializer(serializers.Serializer):
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model  = Department
-        fields = ["code", "name", "synced_at"]
+        fields = ["code", "name", "synced_at"]  

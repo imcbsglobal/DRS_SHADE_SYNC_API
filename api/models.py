@@ -37,6 +37,15 @@ class DoctorTiming(models.Model):
     code      = models.CharField(max_length=10, blank=True, null=True)
     t1        = models.FloatField(blank=True, null=True)
     t2        = models.FloatField(blank=True, null=True)
+    sun       = models.IntegerField(blank=True, null=True)
+    mon       = models.IntegerField(blank=True, null=True)
+    tue       = models.IntegerField(blank=True, null=True)
+    wed       = models.IntegerField(blank=True, null=True)
+    thu       = models.IntegerField(blank=True, null=True)
+    fri       = models.IntegerField(blank=True, null=True)
+    sat       = models.IntegerField(blank=True, null=True)
+    time1     = models.TimeField(blank=True, null=True)
+    time2     = models.TimeField(blank=True, null=True)
     synced_at = models.TextField(blank=True, null=True)
 
     class Meta:
